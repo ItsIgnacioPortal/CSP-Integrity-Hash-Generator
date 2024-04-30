@@ -9,7 +9,7 @@ for (let i = 0; i < scripts.length; i++) {
     const data = enc.encode(script.innerHTML); // Encode script content
     crypto.subtle.digest('SHA-256', data).then(function(val){
         const digest = ["sha256", _arrayBufferToBase64(val)].join('-');
-        console.log(`Script Hash for:`, script, `\nCode snippet:\n${scriptLines}\n\nThe SHA-256 for this script is: ${digest}\n`);
+        console.log(`Script Hash for:`, script, `\nCode snippet:\n\t${scriptLines}\n\nThe SHA-256 for this script is: ${digest}\n`);
     });
 }
 
@@ -24,7 +24,7 @@ for (let i = 0; i < styles.length; i++) {
     const data = enc.encode(style.innerHTML); // Encode style content
     crypto.subtle.digest('SHA-256', data).then(function(val){
         const digest = ["sha256", _arrayBufferToBase64(val)].join('-');
-        console.log(`Style Hash for:`, style, `\nCode snippet:\n${styleLines}\n\nThe SHA-256 for this style is: ${digest}\n`);
+        console.log(`Style Hash for:`, style, `\nCode snippet:\n\t${styleLines}\n\nThe SHA-256 for this style is: ${digest}\n`);
     });
 }
 
