@@ -1,4 +1,4 @@
-# CSP-Hash-Generator
+# CSP Integrity Hash Generator
 Javascript to quickly generate CSP hashes for all script/style elements in a website.
 
 1. Copy the source code of [main.js](main.js)
